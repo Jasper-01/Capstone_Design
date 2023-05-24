@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 class PopupKeyword : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_keyword_popup)
+        setContentView(R.layout.activity_popup_keyword)
 
         val searchBtn = findViewById<ImageButton>(R.id.searchImageButton)
 

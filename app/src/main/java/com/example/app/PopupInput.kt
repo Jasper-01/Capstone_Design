@@ -9,7 +9,7 @@ class PopupInput : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         overridePendingTransition(0, 0)
-        setContentView(R.layout.activity_input_popup)
+        setContentView(R.layout.activity_popup_input)
 
         val applyBtn = findViewById<Button>(R.id.applyBtn)
         val cancelBtn = findViewById<Button>(R.id.cancelBtn)

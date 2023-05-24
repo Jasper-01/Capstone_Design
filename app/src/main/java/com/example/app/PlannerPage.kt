@@ -1,6 +1,8 @@
 package com.example.app
 
 import android.annotation.SuppressLint
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.Gravity
 import android.widget.Button
@@ -30,7 +32,7 @@ class PlannerPage : AppCompatActivity() {
         for (i in buttonIDs.indices){
             buttons[i] = findViewById(buttonIDs[i])
             buttons[i]?.setOnClickListener{
-                val view = layoutInflater.inflate(R.layout.activity_input_popup, null)
+                val view = layoutInflater.inflate(R.layout.activity_popup_input, null)
                 val window = PopupWindow(this)
                 window.contentView = view
                 window.showAtLocation(view, Gravity.CENTER, 0, 0)
@@ -50,12 +52,12 @@ class PlannerPage : AppCompatActivity() {
         }
 
         searchBtn.setOnClickListener{
-            val view = layoutInflater.inflate(R.layout.activity_keyword_popup, null)
+            val view = layoutInflater.inflate(R.layout.activity_popup_keyword, null)
             val window = PopupWindow(this)
             window.contentView = view
+            window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            window.isOutsideTouchable = true
             window.showAtLocation(view, Gravity.CENTER,0, 0)
-
-
         }
     }
 }
