@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="loginPageText">
+    <style name="generalText">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">22sp</item>
@@ -19,6 +19,34 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">@font/alata</item>
         <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="selectPageBtn">
+        <item name="fontFamily">@font/alata</item>
+        <item name="android:layout_width">130dip</item>
+        <item name="android:layout_height">200dip</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="goToMyPageBtn">
+        <item name="fontFamily">@font/alata</item>
+        <item name="android:layout_width">200dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="plannerBox">
+        <item name="android:layout_width">50dip</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/button_table</item>
+    </style>
+
+    <style name="logo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxWidth">100dip</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">centerCrop</item>
     </style>
 
 </resources>

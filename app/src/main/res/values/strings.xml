@@ -1,10 +1,22 @@
 <resources>
     <string name="app_name">ShowTimeTable</string>
-
-    // Login Page
     <string name="create_account">Create Account</string>
     <string name="login">Login</string>
     <string name="id">ID</string>
     <string name="password">Password</string>
     <string name="colon"> : </string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="welcome_to_showtimetable">Welcome to ShowTimeTable!</string>
+    <string name="go_to_portfolio">Go to PORTFOLIO</string>
+    <string name="go_to_planner">Go to PLANNER</string>
+    <string name="my_page">My Page</string>
+    <string name="name">NAME</string>
+    <string name="planner">Planner</string>
+    <string name="portfolio">Portfolio</string>
+    <string name="keyword">Keyword :</string>
+    <string name="input">INPUT</string>
+    <string name="cancel">Cancel</string>
+    <string name="apply">Apply</string>
 </resources>
