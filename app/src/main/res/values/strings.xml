@@ -24,4 +24,7 @@
     <string name="modify">Modify</string>
     <string name="logo">logo</string>
     <string name="search_icon">search icon</string>
+    <string name="add">Add</string>
+    <string name="sample_title">Sample Title</string>
+    <string name="sample_desc">Sample desc...</string>
 </resources>
