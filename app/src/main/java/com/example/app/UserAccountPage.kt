@@ -22,11 +22,13 @@ class UserAccountPage : AppCompatActivity() {
         plannerBtn.setOnClickListener{
             val intent = Intent(this, PlannerPage::class.java)
             startActivity(intent)
+            finish()
         }
 
         portfolioBtn.setOnClickListener{
             val intent = Intent(this, Case1PortfolioPage::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }

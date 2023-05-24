@@ -49,7 +49,8 @@ class PlannerPage : AppCompatActivity() {
                 }
 
                 applyBtn.setOnClickListener{
-
+                    // need to save input locally in the box with corresponding boxes
+                    // need to change colour of boxes as well (somehow)
                 }
             }
         }
@@ -66,11 +67,13 @@ class PlannerPage : AppCompatActivity() {
         myPageBtn.setOnClickListener {
             val intent = Intent(this, UserAccountPage::class.java)
             startActivity(intent)
+            finish()
         }
 
         portfolioBtn.setOnClickListener {
             val intent = Intent(this, Case1PortfolioPage::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }
