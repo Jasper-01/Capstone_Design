@@ -15,18 +15,18 @@ class SelectPage : AppCompatActivity() {
         val myPageBtn = findViewById<Button>(R.id.goToMyPage)
 
         plannerBtn.setOnClickListener{
-            val Intent = Intent(this, PlannerPage::class.java)
-            startActivity(Intent)
+            val intent = Intent(this, PlannerPage::class.java)
+            startActivity(intent)
         }
 
         portfolioBtn.setOnClickListener{
-            val Intent = Intent(this, Case1PortfolioPage::class.java)
-            startActivity(Intent)
+            val intent = Intent(this, Case1PortfolioPage::class.java)
+            startActivity(intent)
         }
 
         myPageBtn.setOnClickListener{
-            val Intent = Intent(this, UserAccountPage::class.java)
-            startActivity(Intent)
+            val intent = Intent(this, UserAccountPage::class.java)
+            startActivity(intent)
         }
     }
 }

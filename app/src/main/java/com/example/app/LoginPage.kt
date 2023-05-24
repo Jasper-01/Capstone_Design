@@ -14,13 +14,13 @@ class LoginPage : AppCompatActivity() {
         val createAccountBtn = findViewById<Button>(R.id.createAccountBtn)
 
         loginBtn.setOnClickListener{
-            val Intent = Intent(this, SelectPage::class.java)
-            startActivity(Intent)
+            val intent = Intent(this, SelectPage::class.java)
+            startActivity(intent)
         }
 
         createAccountBtn.setOnClickListener{
-            val Intent = Intent(this, CreateAccountPage::class.java)
-            startActivity(Intent)
+            val intent = Intent(this, CreateAccountPage::class.java)
+            startActivity(intent)
         }
     }
 }

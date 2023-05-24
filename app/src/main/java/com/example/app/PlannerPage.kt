@@ -1,5 +1,6 @@
 package com.example.app
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.Gravity
 import android.widget.Button
@@ -9,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 
 class PlannerPage : AppCompatActivity() {
-    private val BUTTON_IDS = intArrayOf(
+    private val buttonIDs = intArrayOf(
         R.id.button00, R.id.button01, R.id.button02, R.id.button03, R.id.button04,
         R.id.button10, R.id.button11, R.id.button12, R.id.button13, R.id.button14,
         R.id.button20, R.id.button21, R.id.button22, R.id.button23, R.id.button24,
@@ -17,16 +18,17 @@ class PlannerPage : AppCompatActivity() {
         R.id.button40, R.id.button41, R.id.button42, R.id.button43, R.id.button44,
     )
 
-    var buttons = arrayOfNulls<Button>(BUTTON_IDS.size)
+    private var buttons = arrayOfNulls<Button>(buttonIDs.size)
 
+    @SuppressLint("InflateParams")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_planner_page)
 
         val searchBtn = findViewById<LinearLayout>(R.id.searchBar)
 
-        for (i in BUTTON_IDS.indices){
-            buttons[i] = findViewById(BUTTON_IDS[i])
+        for (i in buttonIDs.indices){
+            buttons[i] = findViewById(buttonIDs[i])
             buttons[i]?.setOnClickListener{
                 val view = layoutInflater.inflate(R.layout.activity_input_popup, null)
                 val window = PopupWindow(this)
