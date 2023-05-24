@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textMyPage"
         tools:srcCompat="@tools:sample/avatars"
-        app:shapeAppearanceOverlay="@style/Circular"
+        app:shapeAppearance="@style/Circular"
         app:strokeWidth="1dip"
         app:strokeColor="@color/color_3"
         />
@@ -169,7 +169,7 @@
 
     <Button
         android:id="@+id/modifyBtn"
-        style="@style/generalBtn1"
+        style="@style/generalBtn2"
         android:layout_marginTop="20dip"
         android:text="@string/modify"
         app:layout_constraintEnd_toEndOf="parent"

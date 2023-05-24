@@ -47,6 +47,7 @@
     <LinearLayout
         android:id="@+id/searchBar"
         style="@style/plannerPageBoxes"
+        android:backgroundTint="@color/color_3"
         android:orientation="horizontal"
         android:layout_marginTop="15dip"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,11 +58,13 @@
             android:id="@+id/searchIcon"
             style="@style/searchIcon"
             android:contentDescription="@string/search_icon"
-            app:srcCompat="@drawable/ic_search_icon_foreground" />
+            app:srcCompat="@drawable/ic_search_icon_foreground"
+            app:tint="@color/color_1" />
 
         <TextView
             android:id="@+id/textDash"
             style="@style/plannerPageBoxes"
+            android:backgroundTint="@color/color_3"
             android:textStyle="bold"
             android:textSize="11sp"
             android:text="@string/dash"
