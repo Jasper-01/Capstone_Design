@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="loginPageText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/alata</item>
+    </style>
+
+    <style name="loginPageLoginBtn">
+        <item name="android:layout_width">250dip</item>
+        <item name="android:layout_height">100dip</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="loginPageCreateAccountBtn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+</resources>
