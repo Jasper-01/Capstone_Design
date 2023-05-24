@@ -34,6 +34,7 @@
         <item name="android:layout_width">50dip</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@drawable/button_table</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
     </style>
 
     <style name="searchIcon">
@@ -71,6 +72,7 @@
         <item name="android:backgroundTint">@color/color_1</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
     </style>
 
     <style name="keywordPopupText1">

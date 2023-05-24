@@ -53,6 +53,8 @@ class PlannerPage : AppCompatActivity() {
                     // need to change colour of boxes as well (somehow)
                 }
             }
+
+
         }
 
         searchBtn.setOnClickListener{
