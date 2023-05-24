@@ -1,6 +1,7 @@
 package com.example.app
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -27,6 +28,9 @@ class PlannerPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_planner_page)
 
+        val myPageBtn = findViewById<Button>(R.id.myPageBtnPlannerPg)
+        val portfolioBtn = findViewById<Button>(R.id.portfolioBtnPlannerPg)
+
         val searchBtn = findViewById<LinearLayout>(R.id.searchBar)
 
         for (i in buttonIDs.indices){
@@ -47,7 +51,6 @@ class PlannerPage : AppCompatActivity() {
                 applyBtn.setOnClickListener{
 
                 }
-
             }
         }
 
@@ -58,6 +61,16 @@ class PlannerPage : AppCompatActivity() {
             window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             window.isOutsideTouchable = true
             window.showAtLocation(view, Gravity.CENTER,0, 0)
+        }
+
+        myPageBtn.setOnClickListener {
+            val intent = Intent(this, UserAccountPage::class.java)
+            startActivity(intent)
+        }
+
+        portfolioBtn.setOnClickListener {
+            val intent = Intent(this, Case1PortfolioPage::class.java)
+            startActivity(intent)
         }
     }
 }

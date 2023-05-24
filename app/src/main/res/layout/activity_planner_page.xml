@@ -179,7 +179,7 @@
         android:id="@+id/portfolioBtnPlannerPg"
         style="@style/generalBtn2"
         android:layout_marginTop="50dip"
-        android:text="@string/planner"
+        android:text="@string/portfolio"
         app:layout_constraintEnd_toStartOf="@id/myPageBtnPlannerPg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/buttonTable" />
@@ -187,7 +187,7 @@
     <Button
         android:id="@+id/myPageBtnPlannerPg"
         style="@style/generalBtn2"
-        android:text="@string/portfolio"
+        android:text="@string/my_page"
         app:layout_constraintBottom_toBottomOf="@id/portfolioBtnPlannerPg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/portfolioBtnPlannerPg" />
