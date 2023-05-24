@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_2"
     tools:context=".UserAccountPage">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView"
         android:layout_marginTop="20dip"
         android:layout_width="wrap_content"
@@ -15,11 +16,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textMyPage"
         tools:srcCompat="@tools:sample/avatars"
+        app:shapeAppearanceOverlay="@style/Circular"
+        app:strokeWidth="1dip"
+        app:strokeColor="@color/color_3"
         />
 
     <TextView
         android:id="@+id/textUserName"
-        style="@style/generalText"
+        style="@style/generalText1"
         android:layout_marginTop="20dip"
         android:text="@string/name"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +34,8 @@
 
     <TextView
         android:id="@+id/textMyPage"
-        style="@style/generalText"
+        style="@style/generalText1"
+        android:textColor="@color/color_4"
         android:layout_marginTop="30dip"
         android:text="@string/my_page"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +46,8 @@
 
     <TextView
         android:id="@+id/textCreateID"
-        style="@style/generalText"
+        android:textColor="@color/color_4"
+        style="@style/generalText1"
         android:text="@string/id"
         android:layout_marginTop="20dip"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +59,8 @@
     <TextView
         android:id="@+id/textCreatePassword"
         android:layout_marginTop="30dip"
-        style="@style/generalText"
+        style="@style/generalText1"
+        android:textColor="@color/color_4"
         android:text="@string/password"
         app:layout_constraintStart_toStartOf="@id/textCreateID"
         app:layout_constraintTop_toBottomOf="@id/textCreateID"
@@ -61,7 +68,8 @@
 
     <TextView
         android:id="@+id/textEmail"
-        style="@style/generalText"
+        style="@style/generalText1"
+        android:textColor="@color/color_4"
         android:layout_marginTop="30dip"
         android:text="@string/email"
         app:layout_constraintStart_toStartOf="@id/textCreatePassword"
@@ -70,7 +78,8 @@
 
     <TextView
         android:id="@+id/textPhoneNum"
-        style="@style/generalText"
+        android:textColor="@color/color_4"
+        style="@style/generalText1"
         android:layout_marginTop="30dip"
         android:text="@string/phone_number"
         app:layout_constraintStart_toStartOf="@id/textEmail"
@@ -79,7 +88,8 @@
 
     <EditText
         android:id="@+id/editCreateID"
-        style="@style/generalText"
+        style="@style/generalText1"
+        android:textColor="@color/color_4"
         android:layout_width="200dip"
         android:ems="10"
         android:inputType="textPersonName"
@@ -89,7 +99,8 @@
 
     <EditText
         android:id="@+id/editCreatePassword"
-        style="@style/generalText"
+        style="@style/generalText1"
+        android:textColor="@color/color_4"
         android:layout_width="200dip"
         android:ems="10"
         android:inputType="textPassword"
@@ -99,8 +110,9 @@
 
     <EditText
         android:id="@+id/editEmail"
-        style="@style/generalText"
+        style="@style/generalText1"
         android:layout_width="200dip"
+        android:textColor="@color/color_4"
         android:ems="10"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="@id/editCreatePassword"
@@ -109,9 +121,10 @@
 
     <EditText
         android:id="@+id/editPhoneNum"
-        style="@style/generalText"
+        style="@style/generalText1"
         android:layout_width="200dip"
         android:ems="10"
+        android:textColor="@color/color_4"
         android:inputType="phone"
         app:layout_constraintStart_toStartOf="@id/editEmail"
         app:layout_constraintBottom_toBottomOf="@id/textPhoneNum"
@@ -119,23 +132,26 @@
 
     <TextView
         android:id="@+id/colonCreateID"
-        style="@style/generalText"
+        style="@style/generalText1"
         android:text="@string/colon"
+        android:textColor="@color/color_4"
         app:layout_constraintStart_toStartOf="@id/colonCreatePassword"
         app:layout_constraintBottom_toBottomOf="@id/textCreateID"
         />
 
     <TextView
         android:id="@+id/colonCreatePassword"
-        style="@style/generalText"
+        style="@style/generalText1"
         android:text="@string/colon"
+        android:textColor="@color/color_4"
         app:layout_constraintStart_toStartOf="@id/colonEmail"
         app:layout_constraintBottom_toBottomOf="@id/textCreatePassword"
         />
 
     <TextView
         android:id="@+id/colonEmail"
-        style="@style/generalText"
+        style="@style/generalText1"
+        android:textColor="@color/color_4"
         android:text="@string/colon"
         app:layout_constraintStart_toStartOf="@id/colonPhoneNum"
         app:layout_constraintBottom_toBottomOf="@id/textEmail"
@@ -143,7 +159,8 @@
 
     <TextView
         android:id="@+id/colonPhoneNum"
-        style="@style/generalText"
+        style="@style/generalText1"
+        android:textColor="@color/color_4"
         android:text="@string/colon"
         android:layout_marginStart="5dip"
         app:layout_constraintStart_toEndOf="@id/textPhoneNum"
@@ -152,18 +169,16 @@
 
     <Button
         android:id="@+id/modifyBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/generalBtn1"
         android:layout_marginTop="20dip"
-        android:text="Modify"
+        android:text="@string/modify"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textPhoneNum" />
 
     <Button
         android:id="@+id/plannerBtnAccPg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/generalBtn1"
         android:layout_marginTop="50dip"
         android:text="@string/planner"
         app:layout_constraintEnd_toStartOf="@+id/portfolioBtnAccPg"
@@ -173,8 +188,7 @@
 
     <Button
         android:id="@+id/portfolioBtnAccPg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/generalBtn1"
         android:text="@string/portfolio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/plannerBtnAccPg"

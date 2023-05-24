@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="300dip"
+    android:layout_width="330dip"
     android:layout_height="180dip"
-    tools:context=".inputPopup">
+    tools:context=".inputPopup"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardMaxElevation="5dip"
+    app:cardPreventCornerOverlap="true"
+    android:backgroundTint="@color/color_5"
+    >
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="300dip"
+        android:layout_height="180dip"
         android:orientation="vertical"
-        android:weightSum="4"
-        >
+        android:layout_gravity="center_horizontal"
+        android:weightSum="4" >
 
         <TextView
             android:id="@+id/textInput"
-            style="@style/generalText"
+            style="@style/generalText1"
             android:text="@string/input"
+            android:textColor="@color/color_2"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
             android:gravity="center_horizontal"/>
@@ -28,13 +35,15 @@
             android:layout_weight="2"
             android:gravity="bottom"
             android:weightSum="7"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@color/color_1">
 
             <EditText
                 android:id="@+id/textLeft"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
+                android:textColor="@color/color_3"
                 android:ems="10"
                 android:inputType="textPersonName" />
 
@@ -53,6 +62,7 @@
                 android:id="@+id/textRight"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:textColor="@color/color_3"
                 android:layout_weight="3"
                 android:ems="10"
                 android:inputType="textPersonName" />
@@ -67,8 +77,7 @@
 
             <Button
                 android:id="@+id/applyBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/inputPopupBtn"
                 android:text="@string/apply"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/cancelBtn"
@@ -77,8 +86,7 @@
 
             <Button
                 android:id="@+id/cancelBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/inputPopupBtn"
                 android:text="@string/cancel"
                 app:layout_constraintStart_toEndOf="@id/applyBtn"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -87,4 +95,4 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

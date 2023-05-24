@@ -19,4 +19,9 @@
     <string name="input">INPUT</string>
     <string name="cancel">Cancel</string>
     <string name="apply">Apply</string>
+    <string name="dash">_ _ _ _ _ _ _ _ _ _ _ _ _ _ _</string>
+    <string name="my_motto">MY MOTTO</string>
+    <string name="modify">Modify</string>
+    <string name="logo">logo</string>
+    <string name="search_icon">search icon</string>
 </resources>
