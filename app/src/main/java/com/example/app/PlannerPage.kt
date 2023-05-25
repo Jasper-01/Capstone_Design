@@ -39,6 +39,7 @@ class PlannerPage : AppCompatActivity() {
                 val view = layoutInflater.inflate(R.layout.activity_popup_input, null)
                 val window = PopupWindow(this)
                 window.contentView = view
+                window.isFocusable = true
                 window.showAtLocation(view, Gravity.CENTER, 0, 0)
 
                 val cancelBtn = view.findViewById<Button>(R.id.cancelBtn)
@@ -61,6 +62,7 @@ class PlannerPage : AppCompatActivity() {
             val view = layoutInflater.inflate(R.layout.activity_popup_keyword, null)
             val window = PopupWindow(this)
             window.contentView = view
+            window.isFocusable = true
             window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             window.isOutsideTouchable = true
             window.showAtLocation(view, Gravity.CENTER,0, 0)
@@ -73,7 +75,7 @@ class PlannerPage : AppCompatActivity() {
         }
 
         portfolioBtn.setOnClickListener {
-            val intent = Intent(this, Case1PortfolioPage::class.java)
+            val intent = Intent(this, PortfolioPage::class.java)
             startActivity(intent)
             finish()
         }

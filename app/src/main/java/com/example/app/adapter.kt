@@ -26,7 +26,6 @@ class adapter(private val userlist: ArrayList<user>): RecyclerView.Adapter<adapt
     }
 
     public class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-
         val title_cur: TextView = itemView.findViewById(R.id.portfolioTitle)
         val desc_cur: TextView = itemView.findViewById(R.id.portfolioDesc)
     }

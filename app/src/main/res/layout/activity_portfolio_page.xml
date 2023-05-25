@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/color_2"
     android:orientation="vertical"
-    tools:context=".Case1PortfolioPage">
+    tools:context=".PortfolioPage">
 
     <ImageView
         android:id="@+id/logoPortfolioPg"

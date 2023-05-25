@@ -26,7 +26,7 @@ class UserAccountPage : AppCompatActivity() {
         }
 
         portfolioBtn.setOnClickListener{
-            val intent = Intent(this, Case1PortfolioPage::class.java)
+            val intent = Intent(this, PortfolioPage::class.java)
             startActivity(intent)
             finish()
         }
