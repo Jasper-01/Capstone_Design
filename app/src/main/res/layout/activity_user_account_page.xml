@@ -101,7 +101,7 @@
         style="@style/generalText1"
         android:layout_marginStart="5dip"
         android:textColor="@color/color_4"
-        android:layout_width="200dip"
+        android:layout_width="180dip"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintTop_toTopOf="@id/textCreateID"
@@ -112,7 +112,7 @@
         android:id="@+id/editPasswordUserPg"
         style="@style/generalText1"
         android:textColor="@color/color_4"
-        android:layout_width="200dip"
+        android:layout_width="180dip"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="@id/editIDUserPg"
@@ -122,7 +122,7 @@
     <EditText
         android:id="@+id/editEmailUserPg"
         style="@style/generalText1"
-        android:layout_width="200dip"
+        android:layout_width="180dip"
         android:textColor="@color/color_4"
         android:ems="10"
         android:inputType="textEmailAddress"
@@ -133,7 +133,7 @@
     <EditText
         android:id="@+id/editPhoneNumUserPg"
         style="@style/generalText1"
-        android:layout_width="200dip"
+        android:layout_width="180dip"
         android:ems="10"
         android:textColor="@color/color_4"
         android:inputType="phone"
@@ -205,5 +205,44 @@
         app:layout_constraintStart_toEndOf="@id/plannerBtnAccPg"
         app:layout_constraintTop_toTopOf="@+id/plannerBtnAccPg" />
 
+    <View
+        android:layout_width="180dip"
+        android:layout_height="1dip"
+        android:background="@color/colour_00"
+        android:layout_marginBottom="8dip"
+        app:layout_constraintStart_toStartOf="@id/editIDUserPg"
+        app:layout_constraintBottom_toBottomOf="@id/editIDUserPg"/>
+
+    <View
+        android:layout_width="180dip"
+        android:layout_height="1dip"
+        android:background="@color/colour_00"
+        android:layout_marginBottom="8dip"
+        app:layout_constraintStart_toStartOf="@id/editIDUserPg"
+        app:layout_constraintBottom_toBottomOf="@id/editIDUserPg"/>
+
+    <View
+        android:layout_width="180dip"
+        android:layout_height="1dip"
+        android:background="@color/colour_00"
+        android:layout_marginBottom="8dip"
+        app:layout_constraintStart_toStartOf="@id/editPasswordUserPg"
+        app:layout_constraintBottom_toBottomOf="@id/editPasswordUserPg"/>
+
+    <View
+        android:layout_width="180dip"
+        android:layout_height="1dip"
+        android:background="@color/colour_00"
+        android:layout_marginBottom="8dip"
+        app:layout_constraintStart_toStartOf="@id/editEmailUserPg"
+        app:layout_constraintBottom_toBottomOf="@id/editEmailUserPg"/>
+
+    <View
+        android:layout_width="180dip"
+        android:layout_height="1dip"
+        android:background="@color/colour_00"
+        android:layout_marginBottom="8dip"
+        app:layout_constraintStart_toStartOf="@id/editPhoneNumUserPg"
+        app:layout_constraintBottom_toBottomOf="@id/editPhoneNumUserPg"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
