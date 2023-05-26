@@ -42,6 +42,7 @@ class PortfolioPage : AppCompatActivity() {
             window.contentView = view
             window.isFocusable = true
             window.showAtLocation(view, Gravity.CENTER, 0, 0)
+            dimBG.dimBehind(window)
 
             val applyBtn = view.findViewById<Button>(R.id.addPortfolioApplyBtn)
             val cancelBtn = view.findViewById<Button>(R.id.addPortfolioCancelBtn)

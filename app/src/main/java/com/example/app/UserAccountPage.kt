@@ -5,6 +5,7 @@ package com.example.app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -15,11 +16,19 @@ class UserAccountPage : AppCompatActivity() {
         R.id.editIDUserPg, R.id.editPasswordUserPg, R.id.editEmailUserPg, R.id.editPhoneNumUserPg
     )
 
+    private val underlineID = intArrayOf(
+        R.id.underlineID, R.id.underlinePassword, R.id.underlineEmail, R.id.underlinePhoneNum
+    )
+
     private val inputFieldsName = arrayListOf<String>(
         "ID", "Password", "Email", "PhoneNum"
     )
 
     private var inputFields = arrayOfNulls<EditText>(inputFieldsID.size)
+
+    private var underlineFields = arrayOfNulls<View>(underlineID.size)
+
+    var modify = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,28 +44,23 @@ class UserAccountPage : AppCompatActivity() {
 
         userImage.setImageResource(R.drawable.ic_user_circle_foreground)
 
-        for(i in inputFieldsID.indices){
-            inputFields[i] = findViewById(inputFieldsID[i])
-            editText.disableEditText(inputFields[i])
-        }
+        modifyDisable(modifyBtn)
 
-        plannerBtn.setOnClickListener{
+        plannerBtn.setOnClickListener {
             val intent = Intent(this, PlannerPage::class.java)
             startActivity(intent)
             finish()
         }
 
-        portfolioBtn.setOnClickListener{
+        portfolioBtn.setOnClickListener {
             val intent = Intent(this, PortfolioPage::class.java)
             startActivity(intent)
             finish()
         }
 
         modifyBtn.setOnClickListener {
-            for(i in inputFieldsID.indices){
-                inputFields[i] = findViewById(inputFieldsID[i])
-                editText.enableEditText(inputFields[i])
-            }
+            if (!modify) modifyEnable(modifyBtn)
+            else modifyDisable(modifyBtn)
         }
 
         backBtn.setOnClickListener {
@@ -64,7 +68,29 @@ class UserAccountPage : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-        finish()
+    fun modifyEnable(modifyBtn : Button){
+        for (i in inputFieldsID.indices) {
+            inputFields[i] = findViewById(inputFieldsID[i])
+            editText.enableEditText(inputFields[i])
+            modifyBtn.text = getString(R.string.confirm)
+
+            underlineFields[i] = findViewById(underlineID[i])
+            underlineFields[i]?.visibility = View.VISIBLE
+
+            modify = true
+        }
+    }
+
+    fun modifyDisable(modifyBtn : Button){
+        for (i in inputFieldsID.indices) {
+            inputFields[i] = findViewById(inputFieldsID[i])
+            editText.disableEditText(inputFields[i])
+            modifyBtn.text = getString(R.string.modify)
+
+            underlineFields[i] = findViewById(underlineID[i])
+            underlineFields[i]?.visibility = View.INVISIBLE
+
+            modify = false
+        }
     }
 }

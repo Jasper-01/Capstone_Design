@@ -9,9 +9,10 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/backBtnLoginPg"
         style="@style/backBtn"
+        app:tint="@color/color_3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/color_2"
+        app:backgroundTint="@color/transparent"
         app:srcCompat="@drawable/ic_back_icon_foreground" />
 
     <Button

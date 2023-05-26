@@ -41,11 +41,12 @@ class PlannerPage : AppCompatActivity() {
         for (i in buttonIDs.indices){
             buttons[i] = findViewById(buttonIDs[i])
             buttons[i]?.setOnClickListener{
-                val view = layoutInflater.inflate(R.layout.activity_popup_input, null)
+                val view = layoutInflater.inflate(R.layout.popup_input, null)
                 val window = PopupWindow(this)
                 window.contentView = view
                 window.isFocusable = true
                 window.showAtLocation(view, Gravity.CENTER, 0, 0)
+                dimBG.dimBehind(window)
 
                 val cancelBtn = view.findViewById<Button>(R.id.cancelBtn)
                 val applyBtn = view.findViewById<Button>(R.id.applyBtn)
@@ -64,13 +65,14 @@ class PlannerPage : AppCompatActivity() {
         }
 
         searchBtn.setOnClickListener{
-            val view = layoutInflater.inflate(R.layout.activity_popup_keyword, null)
+            val view = layoutInflater.inflate(R.layout.popup_keyword, null)
             val window = PopupWindow(this)
             window.contentView = view
             window.isFocusable = true
             window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             window.isOutsideTouchable = true
             window.showAtLocation(view, Gravity.CENTER,0, 0)
+            dimBG.dimBehind(window)
         }
 
         myPageBtn.setOnClickListener {

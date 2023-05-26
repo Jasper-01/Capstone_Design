@@ -130,8 +130,8 @@
         <item name="android:maxWidth">65dip</item>
         <item name="android:adjustViewBounds">true</item>
         <item name="android:scaleType">fitXY</item>
-        <item name="android:backgroundTint">@color/color_3</item>
-        <item name="android:tint">@color/color_2</item>
+        <item name="android:backgroundTint">@color/transparent</item>
+        <item name="android:tint">@color/color_1</item>
     </style>
 
     <style name="Circular">

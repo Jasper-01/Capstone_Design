@@ -5,8 +5,7 @@
     android:layout_width="330dip"
     android:layout_height="180dip"
     android:background="@color/color_5"
-    android:orientation="vertical"
-    tools:context=".PopupKeyword">
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="300dip"

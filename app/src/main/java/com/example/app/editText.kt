@@ -21,8 +21,4 @@ object editText{
 //        editText?.keyListener = null
         editText?.setBackgroundColor(Color.TRANSPARENT)
     }
-
-    fun hello(): String {
-        return "hello"
-    }
 }

@@ -10,9 +10,10 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/backBtnUserAccPg"
         style="@style/backBtn"
+        app:tint="@color/color_3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/color_2"
+        app:backgroundTint="@color/transparent"
         app:srcCompat="@drawable/ic_back_icon_foreground" />
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -206,6 +207,7 @@
         app:layout_constraintTop_toTopOf="@+id/plannerBtnAccPg" />
 
     <View
+        android:id="@+id/underlineID"
         android:layout_width="180dip"
         android:layout_height="1dip"
         android:background="@color/colour_00"
@@ -214,14 +216,7 @@
         app:layout_constraintBottom_toBottomOf="@id/editIDUserPg"/>
 
     <View
-        android:layout_width="180dip"
-        android:layout_height="1dip"
-        android:background="@color/colour_00"
-        android:layout_marginBottom="8dip"
-        app:layout_constraintStart_toStartOf="@id/editIDUserPg"
-        app:layout_constraintBottom_toBottomOf="@id/editIDUserPg"/>
-
-    <View
+        android:id="@+id/underlinePassword"
         android:layout_width="180dip"
         android:layout_height="1dip"
         android:background="@color/colour_00"
@@ -230,6 +225,7 @@
         app:layout_constraintBottom_toBottomOf="@id/editPasswordUserPg"/>
 
     <View
+        android:id="@+id/underlineEmail"
         android:layout_width="180dip"
         android:layout_height="1dip"
         android:background="@color/colour_00"
@@ -238,6 +234,7 @@
         app:layout_constraintBottom_toBottomOf="@id/editEmailUserPg"/>
 
     <View
+        android:id="@+id/underlinePhoneNum"
         android:layout_width="180dip"
         android:layout_height="1dip"
         android:background="@color/colour_00"
