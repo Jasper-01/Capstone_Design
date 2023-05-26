@@ -7,6 +7,14 @@
     tools:context=".CreateAccountPage"
     android:background="@color/color_2">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/backBtnCreateAccPg"
+        style="@style/backBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/color_2"
+        app:srcCompat="@drawable/ic_back_icon_foreground" />
+
     <TextView
         android:id="@+id/textCreateID"
         style="@style/generalText1"

@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     android:background="@color/color_2">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/backBtnLoginPg"
+        style="@style/backBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/color_2"
+        app:srcCompat="@drawable/ic_back_icon_foreground" />
+
     <Button
         android:id="@+id/createAccountBtn"
         style="@style/generalBtn2"

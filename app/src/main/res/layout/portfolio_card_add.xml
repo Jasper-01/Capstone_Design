@@ -38,7 +38,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/popup_keyword_outline"
-                    android:src="@mipmap/ic_image_icon" />
+                    android:src="@drawable/ic_image_icon_foreground" />
             </LinearLayout>
 
             <LinearLayout

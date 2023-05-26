@@ -8,10 +8,18 @@
     android:orientation="vertical"
     tools:context=".PortfolioPage">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/backBtnPortfolioPg"
+        style="@style/backBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/color_2"
+        app:srcCompat="@drawable/ic_back_icon_foreground" />
+
     <ImageView
         android:id="@+id/logoPortfolioPg"
         style="@style/logo"
-        android:layout_marginTop="20dip"
+        android:layout_marginTop="10dip"
         android:layout_gravity="center"
         app:srcCompat="@drawable/logo" />
 

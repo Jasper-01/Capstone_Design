@@ -7,6 +7,14 @@
     android:background="@color/color_2"
     tools:context=".PlannerPage">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/backBtnPlannerPg"
+        style="@style/backBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/color_2"
+        app:srcCompat="@drawable/ic_back_icon_foreground" />
+
     <ImageView
         android:id="@+id/logoPlannerPg"
         style="@style/logo"

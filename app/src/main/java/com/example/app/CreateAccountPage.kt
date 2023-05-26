@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.app
 
 import android.content.Intent
@@ -6,11 +8,14 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class CreateAccountPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_account_page)
+
+        val backBtn = findViewById<FloatingActionButton>(R.id.backBtnCreateAccPg)
 
         val id = findViewById<EditText>(R.id.editCreateID)
         val pw = findViewById<EditText>(R.id.editCreatePassword)
@@ -45,6 +50,10 @@ class CreateAccountPage : AppCompatActivity() {
             } else{
                 Toast.makeText(applicationContext, "Please enter details for all fields", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        backBtn.setOnClickListener {
+            onBackPressed()
         }
     }
 

@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.app
 
 import android.annotation.SuppressLint
@@ -10,6 +12,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class PlannerPage : AppCompatActivity() {
@@ -27,6 +30,8 @@ class PlannerPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_planner_page)
+
+        val backBtn = findViewById<FloatingActionButton>(R.id.backBtnPlannerPg)
 
         val myPageBtn = findViewById<Button>(R.id.myPageBtnPlannerPg)
         val portfolioBtn = findViewById<Button>(R.id.portfolioBtnPlannerPg)
@@ -78,6 +83,10 @@ class PlannerPage : AppCompatActivity() {
             val intent = Intent(this, PortfolioPage::class.java)
             startActivity(intent)
             finish()
+        }
+
+        backBtn.setOnClickListener {
+            onBackPressed()
         }
     }
 }

@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.app
 
 import android.content.Intent
@@ -7,6 +9,7 @@ import android.os.Handler
 import android.os.Looper
 import android.widget.Button
 import android.widget.Toast
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 // main page before exiting (assume verification is done)
 class SelectPage : AppCompatActivity() {
@@ -15,6 +18,8 @@ class SelectPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_select_page)
+
+        val backBtn = findViewById<FloatingActionButton>(R.id.backBtnSelectPg)
 
         val plannerBtn = findViewById<Button>(R.id.goToPlannerBtn)
         val portfolioBtn = findViewById<Button>(R.id.goToPortfolioBtn)
@@ -34,8 +39,13 @@ class SelectPage : AppCompatActivity() {
             val intent = Intent(this, UserAccountPage::class.java)
             startActivity(intent)
         }
+
+        backBtn.setOnClickListener {
+            onBackPressed()
+        }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         if (doubleBackToExitPressedOnce) {
             finishAffinity()

@@ -1,10 +1,15 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.app
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.Gravity
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class PortfolioPage : AppCompatActivity() {
@@ -15,6 +20,8 @@ class PortfolioPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_portfolio_page)
+
+        val backBtn = findViewById<FloatingActionButton>(R.id.backBtnPortfolioPg)
 
         val addBtn = findViewById<Button>(R.id.addPortfolioBtn)
 
@@ -64,6 +71,10 @@ class PortfolioPage : AppCompatActivity() {
             cancelBtn.setOnClickListener {
                 window.dismiss()
             }
+        }
+
+        backBtn.setOnClickListener {
+            onBackPressed()
         }
     }
 

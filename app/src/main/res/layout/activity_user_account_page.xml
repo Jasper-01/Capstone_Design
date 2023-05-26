@@ -7,6 +7,14 @@
     android:background="@color/color_2"
     tools:context=".UserAccountPage">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/backBtnUserAccPg"
+        style="@style/backBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/color_2"
+        app:srcCompat="@drawable/ic_back_icon_foreground" />
+
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/userImage"
         android:layout_marginTop="20dip"
@@ -89,47 +97,48 @@
         />
 
     <EditText
-        android:id="@+id/editCreateID"
+        android:id="@+id/editIDUserPg"
         style="@style/generalText1"
+        android:layout_marginStart="5dip"
         android:textColor="@color/color_4"
         android:layout_width="200dip"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@id/textCreateID"
+        app:layout_constraintTop_toTopOf="@id/textCreateID"
         app:layout_constraintStart_toEndOf="@id/colonCreateID"
         />
 
     <EditText
-        android:id="@+id/editCreatePassword"
+        android:id="@+id/editPasswordUserPg"
         style="@style/generalText1"
         android:textColor="@color/color_4"
         android:layout_width="200dip"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="@id/editCreateID"
-        app:layout_constraintBottom_toBottomOf="@id/textCreatePassword"
+        app:layout_constraintStart_toStartOf="@id/editIDUserPg"
+        app:layout_constraintTop_toTopOf="@id/textCreatePassword"
         />
 
     <EditText
-        android:id="@+id/editEmail"
+        android:id="@+id/editEmailUserPg"
         style="@style/generalText1"
         android:layout_width="200dip"
         android:textColor="@color/color_4"
         android:ems="10"
         android:inputType="textEmailAddress"
-        app:layout_constraintStart_toStartOf="@id/editCreatePassword"
-        app:layout_constraintBottom_toBottomOf="@id/textEmail"
+        app:layout_constraintStart_toStartOf="@id/editPasswordUserPg"
+        app:layout_constraintTop_toTopOf="@id/textEmail"
         />
 
     <EditText
-        android:id="@+id/editPhoneNum"
+        android:id="@+id/editPhoneNumUserPg"
         style="@style/generalText1"
         android:layout_width="200dip"
         android:ems="10"
         android:textColor="@color/color_4"
         android:inputType="phone"
-        app:layout_constraintStart_toStartOf="@id/editEmail"
-        app:layout_constraintBottom_toBottomOf="@id/textPhoneNum"
+        app:layout_constraintStart_toStartOf="@id/editEmailUserPg"
+        app:layout_constraintTop_toTopOf="@id/textPhoneNum"
         />
 
     <TextView
@@ -176,7 +185,7 @@
         android:text="@string/modify"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textPhoneNum" />
+        app:layout_constraintTop_toBottomOf="@+id/editPhoneNumUserPg" />
 
     <Button
         android:id="@+id/plannerBtnAccPg"
